@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameVerse</title>
+    <link rel="stylesheet" href="/static/css/GAMEVERSE.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+    <img src="/static/img/GVV.png" alt="Logo GameVerse">
+</div>
+            <nav>
+                <ul>
+                    <li><a href="/games">Jogos</a></li>
+                    <li><a href="#">Recursos</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="auth">
+                <button class="login" id="login-btn">Entrar</button>
+                <button class="register">Cadastrar</button>
+            </div>
+        </div>
+    </header>
+ 
+<section class="hero">
+    <div class="container">
+        <h1>Bem-vindo ao GameVerse</h1>
+        <p>Seu destino definitivo para aventuras de jogos e experiências épicas</p>
+        <a href="/games" class="explore-button" style="text-decoration: none;">Explorar Jogos</a>
+    </div>
+</section>
+
+    <section class="featured-games">
+        <div class="container">
+            <h2>O que você encontra por aqui</h2>
+            <div class="game-grid">
+                <div class="game-card">
+                    <div class="game-icon">🎮</div>
+                    <h3>Aventuras de Ação</h3>
+                    <p>Entre em missões emocionantes e batalhas épicas em mundos imersivos cheios de perigo e emoção.</p>
+                </div>
+                <div class="game-card">
+                    <div class="game-icon">🏁</div>
+                    <h3>Jogos de Corrida</h3>
+                    <p>Sinta a adrenalina correndo pelas veias ao acelerar por pistas desafiadoras e competir contra os melhores pilotos.</p>
+                </div>
+                <div class="game-card">
+                    <div class="game-icon">🧩</div>
+                    <h3>Enigmas</h3>
+                    <p>Exercite sua mente com quebra-cabeças intrigantes e desafios estratégicos que testam seu raciocínio.</p>
+                </div>
+                <div class="game-card">
+                    <div class="game-icon">⚔️</div>
+                    <h3>Guerras Estratégicas</h3>
+                    <p>Comande exércitos, construa impérios e supere seus oponentes em cenários de guerra tática.</p>
+                </div>
+                <div class="game-card">
+                    <div class="game-icon">🌍</div>
+                    <h3>Mundo Aberto</h3>
+                    <p>Explore paisagens vastas, descubra segredos ocultos e crie sua própria aventura em mundos sem fronteiras.</p>
+                </div>
+                <div class="game-card">
+                    <div class="game-icon">👥</div>
+                    <h3>Multijogador</h3>
+                    <p>Faça equipe com amigos ou compita contra jogadores do mundo todo em batalhas multijogador intensas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-choose">
+        <div class="container">
+            <h2>Por que Escolher o GameVerse?</h2>
+            <p>Oferecemos uma vasta seleção de jogos, uma comunidade engajada e uma experiência de jogo incomparável.</p>
+            </div>
+    </section>
+
+    <section class="game-stats">
+        <div class="container">
+            <h2>Estatísticas de Jogos</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">10M+</div>
+                    <div class="stat-label">Jogadores Ativos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Jogos Disponíveis</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Países</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Suporte</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="social-icons">
+                <a href="#" target="_blank">🌐</a>
+                <a href="#" target="_blank">🐦</a>
+                <a href="#" target="_blank">📺</a>
+                <a href="#" target="_blank">👾</a>
+            </div>
+            <p>© 2024 GameVerse. Todos os direitos reservados. Eleve sua experiência de jogo!</p>
+        </div>
+    </footer>
+
+    <div id="login-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <button id="close-btn" class="close-button">&times;</button>
+            <h2>Login</h2>
+            <p>Bem-vindo de volta! Faça login na sua conta.</p>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" placeholder="Sua senha" required>
+                </div>
+                <button type="submit" class="submit-btn">Entrar</button>
+            </form>
+        </div>
+    </div>
+    <script src="/static/js/GAMEVERSE.js"></script>
+</body>
+</html>
