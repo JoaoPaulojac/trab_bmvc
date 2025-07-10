@@ -20,11 +20,16 @@
                     <li><a href="#">Contato</a></li>
                 </ul>
             </nav>
-            <div class="auth">
-                <button class="login" id="login-btn">Entrar</button>
-                <button class="register">Cadastrar</button>
-            </div>
-        </div>
+          <div class="auth">
+    % if defined('user') and user:
+        <span>Olá, {{user}}</span>
+        <a href="/logout" class="login" style="text-decoration: none; padding: 10px 20px;">Sair</a>
+    % else:
+        <button class="login" id="login-btn">Entrar</button>
+        <a href="/register" class="register" style="text-decoration: none; padding: 10px 20px; border-radius: 5px;">Cadastrar</a>
+    % end
+</div>
+      </div>
     </header>
  
 <section class="hero">
@@ -121,17 +126,20 @@
             <button id="close-btn" class="close-button">&times;</button>
             <h2>Login</h2>
             <p>Bem-vindo de volta! Faça login na sua conta.</p>
-            <form id="login-form">
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">Senha</label>
-                    <input type="password" id="password" name="password" placeholder="Sua senha" required>
-                </div>
-                <button type="submit" class="submit-btn">Entrar</button>
-            </form>
+            <form id="login-form" action="/login" method="post">
+    % if defined('login_error'):
+    <p style="color: red;">{{login_error}}</p>
+    % end
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+    </div>
+    <div class="form-group">
+        <label for="password">Senha</label>
+        <input type="password" id="password" name="password" placeholder="Sua senha" required>
+    </div>
+    <button type="submit" class="submit-btn">Entrar</button>
+</form>
         </div>
     </div>
     <script src="/static/js/GAMEVERSE.js"></script>
