@@ -1,0 +1,9 @@
+[
+  {
+    "id": 2,
+    "email": "bec@gmail.com",
+    "username": "bec",
+    "profile_image": "/static/img/profile/atendente_1752192843.jpg",
+    "password_hash": "$2b$12$6V0asUfPflQbJEQXEmiUFusfrA08WaLPOiGwtNKsx3uh30THG9cY."
+  }
+]

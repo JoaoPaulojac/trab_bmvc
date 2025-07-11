@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Minha Conta - GameVerse</title>
+    <link rel="stylesheet" href="/static/css/GAMEVERSE.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="/GAMEVERSE"><img src="/static/img/GVV.png" alt="Logo GameVerse"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/GAMEVERSE">Início</a></li>
+                    <li><a href="/games_public">Ver Jogos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container" style="padding: 40px 0;">
+        <div class="modal-content" style="max-width: 600px; margin: auto; position: static; box-shadow: none;">
+            <h2>Minha Conta</h2>
+            <p>Veja e edite seus dados.</p>
+            % if defined('error'):
+            <p style="color: red;">{{error}}</p>
+            % end
+            % if defined('success'):
+            <p style="color: green;">{{success}}</p>
+            % end
+            <form action="/account/edit" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="username">Nome de Usuário</label>
+                    <input type="text" id="username" name="username" value="{{user.username}}" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" value="{{user.email}}" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Nova Senha (deixe em branco para não alterar)</label>
+                    <input type="password" id="password" name="password" placeholder="Sua nova senha">
+                </div>
+                <div class="form-group">
+                    <label>Foto de Perfil Atual</label>
+                    <img src="{{user.profile_image}}" alt="Foto de Perfil" style="max-width: 150px; display: block; margin-bottom: 10px;">
+                </div>
+                <div class="form-group">
+                    <label for="profile_image">Trocar Foto de Perfil (Opcional)</label>
+                    <input type="file" id="profile_image" name="profile_image" accept="image/*">
+                </div>
+                <button type="submit" class="submit-btn">Salvar Alterações</button>
+            </form>
+            <div style="margin-top: 20px; text-align: center;">
+                <a href="/account/delete" onclick="return confirm('Tem certeza que deseja excluir sua conta? Esta ação não pode ser desfeita.');" class="explore-button" style="text-decoration: none; background-color: #d9534f;">Excluir Conta</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
